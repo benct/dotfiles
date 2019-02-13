@@ -62,19 +62,21 @@ alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-# The next line updates PATH for the Google Cloud SDK.
+# Updates PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.bash.inc' ]; then source '/opt/google-cloud-sdk/path.bash.inc'; fi
 
-# The next line enables shell command completion for gcloud.
+# Enables shell command completion for gcloud
 if [ -f '/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/google-cloud-sdk/completion.bash.inc'; fi
 eval "$(kubectl completion bash)"
 alias gr="$HOME/code/travel-app/tools/gr"
 
+# Enables shell command completion for brew
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-export PS1='\[\e[47;1;34m\]\u@\h\[\e[0m\]\[\e[47;1;35m\]:\W\[\e[39m\]$(__git_ps1)\[\e[0;0;0m\]✨  '
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Source other bash files
 [[ -r ~/.bashrc ]] && source ~/.bashrc
