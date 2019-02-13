@@ -1,5 +1,3 @@
-# http://stackoverflow.com/questions/68372/what-are-some-of-your-favorite-command-line-tricks-using-bash#68421
-
 # History settings
 export HISTCONTROL="erasedups:ignoreboth"
 export HISTFILESIZE=500000
