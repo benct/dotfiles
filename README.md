@@ -40,6 +40,7 @@ kill $(ps aux | grep something | awk '{print $2}')
 git log
 git show <hash>
 git diff HEAD~1
+git clean -dfx
 
 # Branch
 git pull
