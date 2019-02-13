@@ -76,4 +76,6 @@ fi
 
 export PS1='\[\e[47;1;34m\]\u@\h\[\e[0m\]\[\e[47;1;35m\]:\W\[\e[39m\]$(__git_ps1)\[\e[0;0;0m\]✨  '
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Source other bash files
+[[ -r ~/.bashrc ]] && source ~/.bashrc
+[[ -r ~/.bash_prompt ]] && source ~/.bash_prompt
