@@ -24,9 +24,6 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # Favourite editor
 export EDITOR=nano
 
-# Tell grep to highlight matches
-export GREP_OPTIONS="—color=auto"
-
 # Default language and encoding
 export LANG=en_GB.UTF-8
 
