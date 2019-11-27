@@ -31,11 +31,12 @@ export LANG=en_GB.UTF-8
 export PATH=$HOME/bin:$PATH
 
 # Java home / aliases
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 12)
 alias java8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
 alias java9="export JAVA_HOME=$(/usr/libexec/java_home -v 9)"
 alias java10="export JAVA_HOME=$(/usr/libexec/java_home -v 10)"
 alias java11="export JAVA_HOME=$(/usr/libexec/java_home -v 11)"
+alias java12="export JAVA_HOME=$(/usr/libexec/java_home -v 12)"
 
 # Aliases
 alias l="ls -la"
@@ -76,3 +77,8 @@ fi
 # Source other bash files
 [[ -r ~/.bashrc ]] && source ~/.bashrc
 [[ -r ~/.bash_prompt ]] && source ~/.bash_prompt
+
+# Artifactory
+export ARTIFACTORY_USER=<e-mail>
+export ARTIFACTORY_PWD=<api-key>
+export ARTIFACTORY_NPM_SECRET="$(echo -n $ARTIFACTORY_USER:$ARTIFACTORY_PWD | base64)"
