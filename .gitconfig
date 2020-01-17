@@ -9,7 +9,7 @@
     st = status
     ci = commit
     pr = pull --rebase
-    pra = pull --rebase --autostash
+    pra = pull --rebase --all --prune --autostash
     co = checkout
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     lol = log --find-copies-harder --graph --abbrev=4 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen%ai %n %C(bold blue)%aN%Creset %B'
@@ -48,6 +48,7 @@
 
 [core]
     autocrlf = input
+    excludesfile = /Users/benct/.gitignore_global
 
 [help]
     autocorrect = 1
