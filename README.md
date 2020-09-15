@@ -42,7 +42,6 @@ git show <hash>
 git diff HEAD~1
 git clean -dfx
 
-# Branch
 git pull
 git checkout -b "<branch>"
 git push origin <branch>
