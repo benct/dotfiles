@@ -48,7 +48,10 @@
 
 [core]
     autocrlf = input
-    excludesfile = /Users/benct/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [help]
     autocorrect = 1
+
+[credential]
+	helper = osxkeychain
