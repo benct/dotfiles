@@ -48,10 +48,10 @@
 
 [core]
     autocrlf = input
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
 [help]
     autocorrect = 1
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
