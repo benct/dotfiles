@@ -20,6 +20,51 @@ Set `chmod` on scripts:
 sudo chmod 755 ~/bin/*
 ```
 
+## Mac Setup
+
+### Install
+```bash
+# Bash
+brew install bash
+chsh -s /bin/bash
+
+# Java
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk14
+
+# Docker
+brew cask install docker
+docker login -u $ARTIFACTORY_USER -p $ARTIFACTORY_PWD containers.schibsted.io
+
+# NVM
+brew install nvm
+mkdir ~/.nvm
+nvm install <version>
+
+# Other
+brew install wget
+brew install direnv
+brew install sshuttle
+```
+
+### Update
+```bash
+# Update App Store apps
+sudo softwareupdate -i -a
+
+# Update Homebrew (Cask) & packages
+brew update
+brew upgrade
+
+# Update npm & packages
+npm install npm -g
+npm update -g
+
+# Update Ruby & gems
+sudo gem update -system
+sudo gem update
+```
+
 ## Useful(?) stuff
 
 ### General
@@ -40,25 +85,11 @@ git show <hash>
 git diff HEAD~1
 git clean -dfx
 
+git config --list --local
+git config user.email "ben@tomlin.no"
+git config user.name "benct"
+
 git pull
 git checkout -b "<branch>"
 git push origin <branch>
-```
-
-### Update
-```bash
-# Update App Store apps
-sudo softwareupdate -i -a
-
-# Update Homebrew (Cask) & packages
-brew update
-brew upgrade
-
-# Update npm & packages
-npm install npm -g
-npm update -g
-
-# Update Ruby & gems
-sudo gem update -system
-sudo gem update
 ```
