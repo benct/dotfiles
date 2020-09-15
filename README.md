@@ -1,7 +1,6 @@
 # .files
 Personal dotfiles for various applications, configurations and whatever.
 
-
 ## Installation
 
 Clone the repository, copy the necessary files to your `$HOME` folder and run the `source` command.
@@ -20,7 +19,6 @@ Set `chmod` on scripts:
 ```bash
 sudo chmod 755 ~/bin/*
 ```
-
 
 ## Useful(?) stuff
 
