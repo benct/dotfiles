@@ -34,13 +34,14 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 
 # Java home / aliases
-export JAVA_HOME=$(/usr/libexec/java_home -v 13)
+export JAVA_HOME=$(/usr/libexec/java_home -v 14)
 alias java8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
 alias java9="export JAVA_HOME=$(/usr/libexec/java_home -v 9)"
 alias java10="export JAVA_HOME=$(/usr/libexec/java_home -v 10)"
 alias java11="export JAVA_HOME=$(/usr/libexec/java_home -v 11)"
 alias java12="export JAVA_HOME=$(/usr/libexec/java_home -v 12)"
 alias java13="export JAVA_HOME=$(/usr/libexec/java_home -v 13)"
+alias java14="export JAVA_HOME=$(/usr/libexec/java_home -v 14)"
 
 # Aliases
 alias l="ls -la"
@@ -49,11 +50,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias gr="./gradlew"
-alias trav="cd ~/code/travel-app/"
+alias trav="cd $HOME/code/travel-app/"
+alias gr="$HOME/code/travel-app/tools/gr"
 
-alias kprod="kubectl --context="prod1""
-alias kdev="kubectl --context="dev-sol-osl01""
+alias kdev="kubectl --context="finn-fiaas-dev-gke01""
+alias kprod="kubectl --context="finn-fiaas-prod-gke01""
 
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
@@ -62,18 +63,15 @@ alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-# Updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.bash.inc' ]; then source '/opt/google-cloud-sdk/path.bash.inc'; fi
+# Update PATH for the Google Cloud SDK.
+if [ -f '$HOME/google-cloud-sdk/path.bash.inc' ]; then . '$HOME/google-cloud-sdk/path.bash.inc'; fi
 
-# Enables shell command completion for gcloud
-if [ -f '/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/google-cloud-sdk/completion.bash.inc'; fi
+# Enable shell command completion for gcloud
+if [ -f '$HOME/google-cloud-sdk/completion.bash.inc' ]; then . '$HOME/google-cloud-sdk/completion.bash.inc'; fi
 eval "$(kubectl completion bash)"
-alias gr="$HOME/code/travel-app/tools/gr"
 
-# Enables shell command completion for brew
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+# Enable shell command completion for brew
+if [ -f '$(brew --prefix)/etc/bash_completion' ]; then . '$(brew --prefix)/etc/bash_completion'; fi
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
