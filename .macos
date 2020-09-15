@@ -11,7 +11,7 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# Save screenshots to the desktop
+# Save screenshots to the Pictures folder
 defaults write com.apple.screencapture location -string "$HOME/Pictures"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -37,7 +37,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 sudo nvram SystemAudioVolume=" "
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true

@@ -27,16 +27,20 @@ export EDITOR=nano
 # Default language and encoding
 export LANG=en_GB.UTF-8
 
+# Add /usr/local/sbin to PATH
+export PATH=/usr/local/sbin:$PATH
+
 # Add ~/bin scripts to PATH
 export PATH=$HOME/bin:$PATH
 
 # Java home / aliases
-export JAVA_HOME=$(/usr/libexec/java_home -v 12)
+export JAVA_HOME=$(/usr/libexec/java_home -v 13)
 alias java8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
 alias java9="export JAVA_HOME=$(/usr/libexec/java_home -v 9)"
 alias java10="export JAVA_HOME=$(/usr/libexec/java_home -v 10)"
 alias java11="export JAVA_HOME=$(/usr/libexec/java_home -v 11)"
 alias java12="export JAVA_HOME=$(/usr/libexec/java_home -v 12)"
+alias java13="export JAVA_HOME=$(/usr/libexec/java_home -v 13)"
 
 # Aliases
 alias l="ls -la"
@@ -82,3 +86,6 @@ fi
 export ARTIFACTORY_USER=<e-mail>
 export ARTIFACTORY_PWD=<api-key>
 export ARTIFACTORY_NPM_SECRET="$(echo -n $ARTIFACTORY_USER:$ARTIFACTORY_PWD | base64)"
+
+# Setup direvn hook
+eval "$(direnv hook bash)"
