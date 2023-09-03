@@ -15,11 +15,6 @@ Set up macos defaults:
 source ~/.macos
 ```
 
-Set `chmod` on scripts:
-```bash
-sudo chmod 755 ~/bin/*
-```
-
 ## Mac Setup
 
 ### Install
